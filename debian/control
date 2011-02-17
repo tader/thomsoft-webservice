@@ -1,0 +1,16 @@
+Source: thomsoft-webservice
+Section: web
+Priority: extra
+Maintainer: Thomas A. de Ruiter <thomas@de-ruiter.cx>
+Build-Depends: debhelper (>= 6), quilt
+Standards-Version: 3.8.0
+
+Package: libthomsoft-webservice-php
+Architecture: all
+Depends: php5 | php5-cgi | php5-cli | libapache2-mod-php5, libzend-framework-php | zendframework
+Description: a simple webservice library
+
+Package: thomsoft-webservice
+Architecture: all
+Depends: libthomsoft-webservice-php (>= 0.1-thomsoft-cloud-3)
+Description: a simple webservice library

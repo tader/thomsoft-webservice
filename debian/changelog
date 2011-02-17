@@ -1,0 +1,45 @@
+thomsoft-webservice (0.2-thomsoft-cloud-1.5) lenny squeeze lucid maverick; urgency=low
+
+  * Changed dependency
+
+ -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Thu, 17 Feb 2011 22:46:36 +0100
+
+thomsoft-webservice (0.2-thomsoft-cloud-1.4) lenny squeeze lucid maverick; urgency=low
+
+  * Changed dependency
+
+ -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Thu, 17 Feb 2011 22:33:35 +0100
+
+thomsoft-webservice (0.2-thomsoft-cloud-1.3) lenny squeeze lucid maverick; urgency=low
+
+  * Attempt at supporting Debian Squeeze
+  * Attempt at supporting Lucid Lynx
+  * Attempt at supporting Maverick Meerkat
+
+ -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Mon, 17 Jan 2011 10:46:15 +0100
+
+thomsoft-webservice (0.2-thomsoft-cloud-1) lenny; urgency=low
+
+  * Added Authentication
+  * Added REST
+
+ -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Sun, 16 Jan 2011 21:44:58 +0100
+
+thomsoft-webservice (0.1-thomsoft-cloud-3) lenny; urgency=low
+
+  * Fixed dependency
+
+ -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Tue, 2 Mar 2010 14:10:00 +0100
+
+thomsoft-webservice (0.1-thomsoft-cloud-2) lenny; urgency=low
+
+  * Fixed dependency
+
+ -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Tue, 2 Mar 2010 14:06:00 +0100
+
+thomsoft-webservice (0.1-thomsoft-cloud-1) lenny; urgency=low
+
+  * Initial Debianized Version
+
+ -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Tue, 2 Mar 2010 12:06:00 +0100
+

@@ -1,0 +1,9 @@
+Package: thomsoft-webservice
+Version: 0.2-thomsoft-cloud-1.5
+Architecture: all
+Maintainer: Thomas A. de Ruiter <thomas@de-ruiter.cx>
+Installed-Size: 32
+Depends: libthomsoft-webservice-php (>= 0.1-thomsoft-cloud-3)
+Section: web
+Priority: extra
+Description: a simple webservice library
