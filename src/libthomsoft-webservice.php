@@ -1,8 +1,8 @@
 <?php if (!defined('SERVICE_CLASS')) die('Access Denied');
 
-foreach ($dir in array(
+foreach (array(
     '/usr/share/php/libzend-framework-php'
-)) {
+) as $dir) {
     if (is_dir($dir)) {
         define('ZEND_FRAMEWORK_PATH', $dir);
         set_include_path(ZEND_FRAMEWORK_PATH);

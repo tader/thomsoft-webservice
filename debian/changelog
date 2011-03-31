@@ -1,4 +1,4 @@
-thomsoft-webservice (11.3.31) lenny squeeze lucid maverick; urgency=low
+thomsoft-webservice (11.3.31-bugfix1) lenny squeeze lucid maverick; urgency=low
 
   * Supporting Debian Squeeze
   * Supporting Debian Lenny
