@@ -1,8 +1,14 @@
 <?php if (!defined('SERVICE_CLASS')) die('Access Denied');
 
-define('ZEND_FRAMEWORK_PATH', '/usr/share/php/libzend-framework-php');
+foreach ($dir in array(
+    '/usr/share/php/libzend-framework-php'
+)) {
+    if (is_dir($dir)) {
+        define('ZEND_FRAMEWORK_PATH', $dir);
+        set_include_path(ZEND_FRAMEWORK_PATH);
+    }
+}
 
-set_include_path(ZEND_FRAMEWORK_PATH);
 require_once 'Zend/Loader.php';
 function __autoload($class) { Zend_Loader::loadClass($class); }
 

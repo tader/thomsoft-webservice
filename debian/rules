@@ -10,7 +10,7 @@
 #export DH_VERBOSE=1
 include /usr/share/quilt/quilt.make
 
-TARBALL_NAME:=ThomsoftWebservice
+TARBALL_NAME:=libthomsoft-webservice-php
 SRC_VERSION:=$(shell dpkg-parsechangelog | sed -ne 's/^Version: \(.*\)-.*/\1/p')
 PACKAGE_NAME:=$(shell dpkg-parsechangelog | sed -ne 's/^Source: \(.*\)/\1/p')
 
@@ -29,7 +29,7 @@ install: build
 	dh_clean -k 
 	dh_installdirs
 
-# Add here commands to install the package into debian/zend-framwork.
+# Add here commands to install the package into debian/libthomsoft-webservice-php
 	cp debian/Makefile .
 	$(MAKE) install-framework DESTDIR=$(CURDIR)/debian/libthomsoft-webservice-php/
 
@@ -41,8 +41,8 @@ binary-arch: install
 binary-indep: install
 	dh_testdir
 	dh_testroot
-	dh_installchangelogs -Nzend-framework
-	dh_installdocs  -Nzend-framework
+	dh_installchangelogs -Nlibthomsoft-webservice-php
+	dh_installdocs  -Nlibthomsoft-webservice-php
 	dh_install
 	dh_compress
 	dh_fixperms
