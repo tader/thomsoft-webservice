@@ -149,7 +149,7 @@ function serveWww() {
 							if (p.type == "boolean" || p.type == "bool") {
 								var fld = document.createElement("input");
 								fld.setAttribute("type", "checkbox");
-								if (p.default) {
+								if (p["default"]) {
 									fld.setAttribute("checked", "checked");
 								}
 							} else {
