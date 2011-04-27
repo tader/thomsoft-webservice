@@ -175,7 +175,13 @@ function serveWww() {
 							parameters = [];
 
 							for (var k in entry.parameters) {
-								parameters.push(document.getElementById(index + "---" + k).value);
+								var p = entry.parameters[k];
+
+								if (p.type == "boolean" || p.type == "bool") {
+									parameters.push(document.getElementById(index + "---" + k).checked);
+								} else {
+									parameters.push(document.getElementById(index + "---" + k).value);
+								}
 							}
 
 							proxy[index].apply(this,parameters).addCallback(function(result){

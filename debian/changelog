@@ -1,3 +1,11 @@
+thomsoft-webservice (11.4.27) lenny squeeze lucid maverick; urgency=low
+
+  * debian: Change build system
+  * www: Show booleans as checkbox
+  * www: Mark required fields
+
+ -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Wed, 27 Apr 2011 12:21:04 +0200
+
 thomsoft-webservice (11.3.31-bugfix1) lenny squeeze lucid maverick; urgency=low
 
   * Supporting Debian Squeeze
