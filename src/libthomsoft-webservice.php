@@ -141,11 +141,23 @@ function serveWww() {
 							div = document.createElement("div");
 							label = document.createElement("label");
 							label.setAttribute("for",index + "---" + j);
-							label.appendChild(document.createTextNode(p.name));
+							label.appendChild(document.createTextNode(
+								(p.optional ? "" : "* ") 
+								+ p.name
+							));
 
-							var fld = document.createElement("input");
+							if (p.type == "boolean" || p.type == "bool") {
+								var fld = document.createElement("input");
+								fld.setAttribute("type", "checkbox");
+								if (p.default) {
+									fld.setAttribute("checked", "checked");
+								}
+							} else {
+								var fld = document.createElement("input");
+							}
+
 							fld.id = index + "---" + j;
-							fld.title = p.name;
+							fld.title = p.name + (p.optional ? " (optional)" : " (required)");
 
 							div.appendChild(label);
 							div.appendChild(fld);
