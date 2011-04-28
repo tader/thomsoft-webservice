@@ -213,5 +213,5 @@ function getUri() {
 	if ($pos = strpos($path, '?'))
 		$path = substr($path,0,$pos);
 
-	return 'http://' . $_SERVER['HTTP_HOST'] . $path;
+    return 'http' . (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] ? 's' : '') . '://' . $_SERVER['HTTP_HOST'] . $path;
 }
