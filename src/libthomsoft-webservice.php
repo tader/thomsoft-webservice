@@ -71,6 +71,7 @@ function serveSoap() {
 			null,
 			array('uri' => getUri())
 		);
+		$server->registerFaultException(array('Exception'));
 		$server->setClass(SERVICE_CLASS);
 		echo $server->handle();
 	}
