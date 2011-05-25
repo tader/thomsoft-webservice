@@ -158,7 +158,17 @@ function serveWww() {
 							}
 
 							fld.id = index + "---" + j;
-							fld.title = p.name + (p.optional ? " (optional)" : " (required)");
+                            fld.title = p.name
+                                + (p.optional 
+                                    ? " (optional" 
+                                        + (p.default 
+                                            ? ", default: " + p.default 
+                                            : ""
+                                          )
+                                        + ")" 
+                                    : " (required)"
+                                  )
+                            ;
 
 							div.appendChild(label);
 							div.appendChild(fld);
@@ -187,7 +197,7 @@ function serveWww() {
 
 							proxy[index].apply(this,parameters).addCallback(function(result){
 								var pre = document.createElement("pre");
-								pre.appendChild(document.createTextNode(dojo.toJson(result)));
+								pre.appendChild(document.createTextNode(dojo.toJson(result, true)));
 								fs.appendChild(pre);
 							}).addErrback(function(message) {
 								var pre = document.createElement("pre");
