@@ -1,3 +1,9 @@
+thomsoft-webservice (11.5.26-bugfix1) lenny squeeze lucid maverick; urgency=low
+
+  * www: fix https and safari issues
+
+ -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Thu, 26 May 2011 10:38:29 +0200
+
 thomsoft-webservice (11.5.25) lenny squeeze lucid maverick; urgency=low
 
   * www: indentation of output json code

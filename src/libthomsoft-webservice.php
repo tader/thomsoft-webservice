@@ -111,7 +111,7 @@ function serveWww() {
 	echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">';
 	echo '<html xmlns="http://www.w3.org/1999/xhtml">';
 	echo '<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Webinterface</title>';
-	echo '<script src="http://ajax.googleapis.com/ajax/libs/dojo/1.4.1/dojo/dojo.xd.js"></script>';
+	echo '<script src="http' . (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] ? 's' : '') . '://ajax.googleapis.com/ajax/libs/dojo/1.4.1/dojo/dojo.xd.js"></script>';
 	echo '<style>';
 	echo 'fieldset { border: 1px solid green; margin-bottom: 4em; padding: 1em; font: 80%/1 sans-serif; -moz-border-radius: 5px; -webkit-border-radius: 5px; } ';
 	echo 'fieldset div { padding-bottom: 1em; } ';
@@ -158,17 +158,16 @@ function serveWww() {
 							}
 
 							fld.id = index + "---" + j;
-                            fld.title = p.name
-                                + (p.optional 
-                                    ? " (optional" 
-                                        + (p.default 
-                                            ? ", default: " + p.default 
-                                            : ""
-                                          )
-                                        + ")" 
-                                    : " (required)"
-                                  )
-                            ;
+
+                            if (p.optional) {
+                                if (p["default"]) {
+                                    fld.title = p.name + " (optional, default: " + p["default"] + ")" ;
+                                } else {
+                                    fld.title = p.name + " (optional)";
+                                }
+                            } else {
+                                fld.title = p.name + " (required)";
+                            }
 
 							div.appendChild(label);
 							div.appendChild(fld);
