@@ -154,7 +154,9 @@ function serveWww() {
 									fld.setAttribute("checked", "checked");
 								}
 							} else {
-								var fld = document.createElement("input");
+								var fld = document.createElement("textarea");
+                                fld.setAttribute("rows", 1);
+                                fld.setAttribute("cols", 40);
 							}
 
 							fld.id = index + "---" + j;

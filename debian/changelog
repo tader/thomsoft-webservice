@@ -1,6 +1,13 @@
-thomsoft-webservice (11.5.26-bugfix1) lenny squeeze lucid maverick; urgency=low
+thomsoft-webservice (11.10.0) lenny squeeze lucid maverick natty oneiric; urgency=low
+
+  * Just adding more dists.
+
+ -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Mon, 31 Oct 2011 18:13:02 +0100
+
+thomsoft-webservice (11.5.26-bugfix2) lenny squeeze lucid maverick; urgency=low
 
   * www: fix https and safari issues
+  * www: textareas
 
  -- Thomas A. de Ruiter <thomas@de-ruiter.cx>  Thu, 26 May 2011 10:38:29 +0200
 
